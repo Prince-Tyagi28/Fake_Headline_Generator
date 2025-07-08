@@ -1,0 +1,73 @@
+ # Step-1
+import random
+
+# Step-2 Create subject
+
+subjects = [
+    "Rohit Sharma",
+    "Prabhash",
+    "Rishabh Pant", 
+    "MS Dhoni", 
+    "Akshay Kumar",
+    "Rahul Gandhi",
+    "An Elephant", 
+    "A Group of Monkeys",
+    "Prime Minister Modi", 
+    "Auto Rickshaw Driver from Delhi",
+    "Chat GPT",
+    "Cat Learns to Use Laptop",
+    "Dog Becomes Mayor",
+    "Abhinabh Singh Bassi",
+    "Government Bans Boring Mondays",
+    "Ranveer Singh",
+    "Karan Johar",
+    "Shahid Kapoor"
+]
+actions = [
+    "Hits a Century",
+    "launches",
+    "cancels",
+    "dances with",
+    "eats the Superpower",
+    "Declares war on",
+    "orders",
+    "celebrates",
+    "Launch Film Based",
+    "Was a Freedom Fighter",
+    "Opens First Acting School",
+    "Invents a New Dance",
+    "Announces Career Shift"
+]
+
+places_or_things = [
+    "While Sleeping",
+    "At Red Fort",
+    "in Mumbai Local Train",
+    "a plate of samosa",
+    "inside parliament",
+    "Captain cool",
+    "at Ganga Ghat",
+    "During IPL Match",
+    "at india gate",
+    "to stand-up comedian",
+    "in Trial Match",
+    " in a 20 Over Match – Alone"
+]
+
+# step-3 (start the headline generation loop)
+
+while True:
+    subject = random.choice(subjects)
+    action = random.choice(actions)
+    places_or_thing = random.choice(places_or_things)
+
+    headline = f"BREAKING NEWS: {subject} {action} {places_or_thing}"
+    print("\n" + headline)
+
+    user_input = input("\n---Do you want another headline?(yes/no)").strip().lower()
+    if user_input == "no":
+        break
+
+    # print goodbye message
+
+print("\nThanks for using the fake News Headline Generator . Have a fun day")
